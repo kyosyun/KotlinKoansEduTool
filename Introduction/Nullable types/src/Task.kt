@@ -1,7 +1,9 @@
 fun sendMessageToClient(
         client: Client?, message: String?, mailer: Mailer
 ){
-    TODO()
+    val email= client?.personalInfo?.email ?: return
+    val message = message ?: return
+    mailer.sendMessage(email, message)
 }
 
 class Client (val personalInfo: PersonalInfo?)
