@@ -1,3 +1,4 @@
+//　再
 // Return the set of cities the customers are from
 fun Shop.getCitiesCustomersAreFrom(): Set<City> = TODO()
 
