@@ -1,7 +1,11 @@
 class LazyProperty(val initializer: () -> Int) {
-    /* TODO */
+
     val lazy: Int
         get() {
-            TODO()
+            // TODO: 再
         }
+
+    operator fun invoke() {
+        initializer()
+    }
 }
