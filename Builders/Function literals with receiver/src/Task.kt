@@ -1,3 +1,4 @@
+// TODO: 再 中身の判定の仕方
 fun task(): List<Boolean> {
     val isEven: Int.() -> Boolean = { TODO() }
     val isOdd: Int.() -> Boolean = { TODO() }
