@@ -1,6 +1,9 @@
 import java.util.*
 
-fun partitionTo() = TODO()
+
+//TODO: 再
+fun partitionTo() {Array<String>, ArrayList<T> ->
+}
 
 fun partitionWordsAndLines() {
     val (words, lines) = listOf("a", "a b", "c", "d e").

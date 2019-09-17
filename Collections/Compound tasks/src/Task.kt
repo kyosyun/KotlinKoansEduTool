@@ -7,8 +7,8 @@ fun Customer.getMostExpensiveDeliveredProduct(): Product? {
 // Return how many times the given product was ordered.
 // Note: a customer may order the same product for several times.
 fun Shop.getNumberOfTimesProductWasOrdered(product: Product): Int {
-//    再
-//    this.customers.flatMap { it.orders }.flatMap { it.products }.fold(, )
+//
+    return customers.flatMap { it.orders }.flatMap { it.products }.filter { it.equals(product) }.count()
 }
 
 /* TODO */

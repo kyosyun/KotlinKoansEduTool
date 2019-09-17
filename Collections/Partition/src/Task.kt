@@ -1,3 +1,5 @@
 // Return customers who have more undelivered orders than delivered
-// TODO: 再
-fun Shop.getCustomersWithMoreUndeliveredOrdersThanDelivered(): Set<Customer> =
+fun Shop.getCustomersWithMoreUndeliveredOrdersThanDelivered(): Set<Customer> = customers.filter {
+    var (deliverd, undeliverd) = it.orders.partition { it.isDelivered }
+     deliverd.count() < undeliverd.count()
+}.toSet()
