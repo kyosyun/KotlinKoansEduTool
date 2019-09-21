@@ -1,8 +1,15 @@
 import java.util.*
+// CollectionViewのpartitionTo を作成する、
 
-
-//TODO: 再
-fun partitionTo() {Array<String>, ArrayList<T> ->
+fun <T, C: MutableCollection<T>> Collection<T>.partitionTo(first: C, second: C, predicate: (T) -> Boolean): Pair<C,C> {
+    for (element in this) {
+        if (predicate(element)) {
+            first.add(element)
+        } else {
+            second.add(element)
+        }
+    }
+    return Pair(first, second)
 }
 
 fun partitionWordsAndLines() {

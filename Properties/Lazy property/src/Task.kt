@@ -1,6 +1,6 @@
 class LazyProperty(val initializer: () -> Int) {
 
-    var value: Int? = null
+    var value: Int?
 
     val lazy: Int
         get() {
